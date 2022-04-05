@@ -1,0 +1,68 @@
+{
+  "list": [
+    {
+      "name": "Strawberry",
+      "emoji": "🍓",
+      "isTrueFruit": false,
+      "canBeEatenRaw": true,
+      "kcal": 43,
+      "water": 131
+    },
+    {
+      "name": "Hot Pepper",
+      "emoji": "🌶️",
+      "isTrueFruit": true,
+      "canBeEatenRaw": false,
+      "kcal": 40,
+      "water": 88
+    },
+    {
+      "name": "Tangerine",
+      "emoji": "🍊",
+      "isTrueFruit": true,
+      "canBeEatenRaw": true,
+      "kcal": 47,
+      "water": 86
+    },
+    {
+      "name": "Grapes",
+      "emoji": "🍇",
+      "isTrueFruit": true,
+      "canBeEatenRaw": true,
+      "kcal": 69,
+      "water": 81
+    },
+    {
+      "name": "Banana",
+      "emoji": "🍌",
+      "isTrueFruit": true,
+      "canBeEatenRaw": true,
+      "kcal": 89,
+      "water": 74
+    },
+    {
+      "name": "Apple",
+      "emoji": "🍎",
+      "isTrueFruit": false,
+      "canBeEatenRaw": true,
+      "kcal": 52,
+      "water": 85
+    },
+    {
+      "name": "Pear",
+      "emoji": "🍐",
+      "isTrueFruit": false,
+      "canBeEatenRaw": true,
+      "kcal": 57,
+      "water": 84
+    },
+    {
+      "name": "Kiwi",
+      "emoji": "🥝",
+      "isTrueFruit": true,
+      "canBeEatenRaw": true,
+      "kcal": 61,
+      "water": 83
+    }
+  ]
+}

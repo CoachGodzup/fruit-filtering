@@ -1,0 +1,29 @@
+.fruitList {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.fruitList > div {
+  border: 1px solid gray;
+  background: lightseagreen;
+  padding: 1em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.fruitList > div h1 {
+  font-size: 4em;
+  line-height: 0.1em;
+}
+
+.fruitList > div h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fruitList > div ul {
+  list-style: none;
+  margin: none;
+  text-align: justify;
+  padding-inline-start: 0px;
+}

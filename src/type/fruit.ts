@@ -17,12 +17,13 @@ const availableFruits = [
   '🍐',
 ];
 
-export type fruitEmoji = typeof availableFruits[number];
+export type fruit = typeof availableFruits[number];
 
 export type Fruit = {
   name: string;
-  emoji: fruitEmoji;
+  emoji: fruit;
   isTrueFruit: boolean;
-  water: number;
+  canBeEatenRaw: boolean;
   kcal: number;
+  water: number;
 };

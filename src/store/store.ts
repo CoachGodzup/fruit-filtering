@@ -1,6 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { fruitReducer } from '../reducer/listReducer';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  fruit: fruitReducer,
+});
 
 export const store = configureStore({
   reducer: rootReducer,
