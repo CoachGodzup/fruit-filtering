@@ -26,4 +26,5 @@ export type Fruit = {
   canBeEatenRaw: boolean;
   kcal: number;
   water: number;
+  kJ: number;
 };

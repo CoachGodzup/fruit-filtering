@@ -20,7 +20,9 @@ const List = () => {
           <ul>
             <li>Is true fruit: {booleanFormatter(elm.isTrueFruit)}</li>
             <li>Can be eaten raw: {booleanFormatter(elm.canBeEatenRaw)}</li>
-            <li>KCal / 100g: {elm.kcal}</li>
+            <li>
+              Energy / 100g: {elm.kJ} KJ ({elm.kcal} KCal)
+            </li>
             <li>Water / 100g: {elm.water}g</li>
           </ul>
         </div>
