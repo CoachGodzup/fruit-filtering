@@ -13,6 +13,7 @@ const List = () => {
 
   return (
     <section className='fruitList'>
+      {list.length === 0 && <div>💔 Nessun frutto trovato 💔</div>}
       {list.map((elm: Fruit) => (
         <div key={elm.emoji}>
           <h1>{elm.emoji}</h1>

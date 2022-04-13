@@ -2,7 +2,6 @@ import { createAction, createReducer, Reducer } from '@reduxjs/toolkit';
 
 export type FilterState = {
   isTrueFruit: boolean[];
-  isRichInWater: boolean[];
   canBeEatenRaw: boolean[];
 };
 
@@ -16,7 +15,6 @@ export type CheckboxAction = {
 
 const initialState: FilterState = {
   isTrueFruit: [false, true],
-  isRichInWater: [false, true],
   canBeEatenRaw: [false, true],
 };
 
