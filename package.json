@@ -1,6 +1,7 @@
 {
   "name": "autosubmit-redux-toolkit",
   "version": "0.1.0",
+  "license": "CC-BY-4.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",

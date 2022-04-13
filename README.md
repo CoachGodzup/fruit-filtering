@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+# 🍒🍋🍇🍓 Fruit filtering! 🍌🍍🍎🍑
+
+Everyone loves fruit, but not everyone loves every kind of fruit.
+
+For instance, I can't love 🍍 on 🍕, because otherwise [I won't be 🇮🇹 anymore 🤌🤌](https://www.youtube.com/watch?v=EDUy3Y_w9Tk).
+
+Thus, I create a super simple project to filter and sort some fruit... and in the meantime learning how to manage filtering with ⚛️ [React](https://en.reactjs.org/) and ⚛️ [Redux Toolkit](https://redux-toolkit.js.org/) state management!
+
+It's licensed [Creative Commons CC-BY-4.0](https://creativecommons.org/licenses//4.0/), the legal shenaningans will be in the project.
+Really, do you want to steal this ugly piece of code?
+
+It's still a work in progress👷‍♀️, so every suggestion will be really appreciated 🙏.
+
+Just because you like it, I leave the rest of the [Create React App](https://github.com/facebook/create-react-app) README boilerplate after that, because... I'm lazy 😪.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+# Here comes the usual boring Create React App ⚛️ README.MD.
+
+## Enjoy!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
