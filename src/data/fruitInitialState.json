@@ -5,7 +5,7 @@
       "emoji": "🍓",
       "isTrueFruit": false,
       "canBeEatenRaw": true,
-      "kcal": 43,
+      "kcal": 33,
       "water": 90,
       "kJ": 136
     },
@@ -23,7 +23,7 @@
       "emoji": "🍊",
       "isTrueFruit": true,
       "canBeEatenRaw": true,
-      "kcal": 47,
+      "kcal": 53,
       "water": 86,
       "kJ": 223
     },

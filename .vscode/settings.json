@@ -1,6 +1,22 @@
 {
   "workbench.colorCustomizations": {
     "activityBar.background": "#006",
-    "activityBar.activeBackground": "#228"
+    "activityBar.activeBackground": "#228",
+    "activityBar.foreground": "#fff",
+    "activityBar.inactiveForeground": "#55f"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "icon": "bug"
+    },
+    "HACK": {
+      "icon": "tools"
+    },
+    "FIXME": {
+      "icon": "flame"
+    },
+    "XXX": {
+      "icon": "$(close)"
+    }
   }
 }

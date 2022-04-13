@@ -14,7 +14,7 @@ const List = () => {
   return (
     <section className='fruitList'>
       {list.map((elm: Fruit) => (
-        <div>
+        <div key={elm.emoji}>
           <h1>{elm.emoji}</h1>
           <h3>{elm.name}</h3>
           <ul>

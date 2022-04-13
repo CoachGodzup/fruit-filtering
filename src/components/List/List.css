@@ -4,7 +4,7 @@
 }
 
 .fruitList > div {
-  border: 1px solid gray;
+  border: none;
   background: lightseagreen;
   padding: 1em;
   margin: 0.5em;
