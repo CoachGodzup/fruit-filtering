@@ -68,6 +68,7 @@ const Filters = () => {
               type='checkbox'
               name='isTrueFruit'
               value={'false'}
+              checked={filters.isTrueFruit.includes(false)}
             />{' '}
             No
           </span>
@@ -77,6 +78,7 @@ const Filters = () => {
               type='checkbox'
               name='isTrueFruit'
               value={'true'}
+              checked={filters.isTrueFruit.includes(true)}
             />{' '}
             Sì
           </span>
@@ -90,6 +92,7 @@ const Filters = () => {
               type='checkbox'
               name='canBeEatenRaw'
               value={'false'}
+              checked={filters.canBeEatenRaw.includes(false)}
             />{' '}
             No
           </span>
@@ -99,6 +102,7 @@ const Filters = () => {
               type='checkbox'
               name='canBeEatenRaw'
               value={'true'}
+              checked={filters.canBeEatenRaw.includes(true)}
             />{' '}
             Sì
           </span>
