@@ -1,5 +1,7 @@
 import { Fruit } from '../type/fruit';
 
+export type SortableProp = 'kcal' | 'water' | 'name' | 'emoji' | 'reverse';
+
 const sortByProp = <T>(a: T, b: T, prop: keyof T) => {
   return a[prop] === b[prop] ? 0 : a[prop] < b[prop] ? -1 : 1;
 };

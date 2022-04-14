@@ -1,14 +1,7 @@
 import React, { ChangeEvent, FormEventHandler } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  reverseSort,
-  sortAlphabetically,
-  sortByEmoji,
-  sortByKcal,
-  sortByWater,
-} from '../../data/sort';
 import { changeCheckboxFilter, FilterState } from '../../reducer/filterReducer';
-import { newfilter, sort } from '../../reducer/listReducer';
+import { filter, sortBy } from '../../reducer/listReducer';
 import { RootState } from '../../store/store';
 
 const Filters = () => {
@@ -16,29 +9,28 @@ const Filters = () => {
   const filters = useSelector((state: RootState) => state.filter);
 
   const handleSortAlphabetically = () => {
-    dispatch(sort(sortAlphabetically));
+    dispatch(sortBy('name'));
   };
 
   const handleSortByKcal = () => {
-    dispatch(sort(sortByKcal));
+    dispatch(sortBy('kcal'));
   };
 
   const handleSortByWater = () => {
-    dispatch(sort(sortByWater));
+    dispatch(sortBy('water'));
   };
 
   const handleSortByEmoji = () => {
-    dispatch(sort(sortByEmoji));
+    dispatch(sortBy('emoji'));
   };
 
   const handleSortReverse = () => {
-    dispatch(sort(reverseSort));
+    dispatch(sortBy('reverse'));
   };
 
   const handleSubmit: FormEventHandler = (event) => {
     event.preventDefault();
-    console.log('@@@@ submit');
-    dispatch(newfilter(filters));
+    dispatch(filter(filters));
   };
 
   const changeFilter = (
