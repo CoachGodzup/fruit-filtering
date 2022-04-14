@@ -4,7 +4,7 @@ Everyone loves fruit, but not everyone loves every kind of fruit.
 
 For instance, I can't love 🍍 on 🍕, because otherwise [I won't be 🇮🇹 anymore 🤌🤌](https://www.youtube.com/watch?v=EDUy3Y_w9Tk).
 
-Thus, I create a super simple project to filter and sort some fruit... and in the meantime learning how to manage filtering with ⚛️ [React](https://en.reactjs.org/) and ⚛️ [Redux Toolkit](https://redux-toolkit.js.org/) state management!
+Thus, I create a super simple project to filter and sort some fruit... and in the meantime learning how to manage [sorting](SORTING.md) and [filtering](FILTERING.md) with ⚛️ [React](https://en.reactjs.org/) and ⚛️ [Redux Toolkit](https://redux-toolkit.js.org/) state management!
 
 It's licensed [Creative Commons CC-BY-4.0](https://creativecommons.org/licenses//4.0/), the legal shenaningans will be in the project.
 Really, do you want to steal this ugly piece of code?

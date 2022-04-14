@@ -25,8 +25,7 @@ export const filter = createAction<FilterState>('fruit/filter');
 
 const availableFilters: AvailableFilters = {
   isTrueFruit: (elm, value) => {
-    const fn = value.includes(elm.isTrueFruit);
-    return fn;
+    return value.includes(elm.isTrueFruit);
   },
   canBeEatenRaw: (elm, value) => {
     return value.includes(elm.canBeEatenRaw);
