@@ -8,7 +8,7 @@ import {
   sortByWater,
 } from '../../data/sort';
 import { changeCheckboxFilter, FilterState } from '../../reducer/filterReducer';
-import { filter, sort } from '../../reducer/listReducer';
+import { newfilter, sort } from '../../reducer/listReducer';
 import { RootState } from '../../store/store';
 
 const Filters = () => {
@@ -37,8 +37,8 @@ const Filters = () => {
 
   const handleSubmit: FormEventHandler = (event) => {
     event.preventDefault();
-    console.log('submit');
-    dispatch(filter(filters));
+    console.log('@@@@ submit');
+    dispatch(newfilter(filters));
   };
 
   const changeFilter = (

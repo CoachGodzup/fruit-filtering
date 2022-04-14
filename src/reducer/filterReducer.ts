@@ -1,9 +1,19 @@
 import { createAction, createReducer, Reducer } from '@reduxjs/toolkit';
+import { Fruit } from '../type/fruit';
 
 export type FilterState = {
   isTrueFruit: boolean[];
   canBeEatenRaw: boolean[];
 };
+
+export interface AvailableFilters
+  extends Record<
+    keyof FilterState,
+    (list: Fruit, filterValue: boolean[]) => boolean
+  > {
+  isTrueFruit: (list: Fruit, filterValue: boolean[]) => boolean;
+  canBeEatenRaw: (list: Fruit, filterValue: boolean[]) => boolean;
+}
 
 export type FilterName = keyof FilterState;
 
@@ -38,7 +48,6 @@ export const filterReducer: Reducer<FilterState> = createReducer(
     builder
       .addCase(resetFilter, () => ({ ...initialState }))
       .addCase(changeCheckboxFilter, (state, { payload }) => {
-        console.log('dispatch received! Reducer');
         const output = {
           ...state,
           [payload.name]: changeFilter(
@@ -47,7 +56,6 @@ export const filterReducer: Reducer<FilterState> = createReducer(
             payload.checked
           ),
         };
-        console.log(`new state`, output);
         return output;
       })
 );

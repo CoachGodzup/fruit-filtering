@@ -2,7 +2,7 @@ import { createAction, createReducer, Reducer } from '@reduxjs/toolkit';
 import fruitInitialState from '../data/fruitInitialState.json';
 import { SortFunction } from '../data/sort';
 import { Fruit } from '../type/fruit';
-import { FilterState } from './filterReducer';
+import { AvailableFilters, FilterState } from './filterReducer';
 
 export type FruitState = {
   list: Fruit[];
@@ -15,6 +15,19 @@ const initialState: FruitState = {
 export const sort = createAction<SortFunction>('fruit/sort');
 export const filter = createAction<FilterState>('fruit/filter');
 
+export const newfilter = createAction<FilterState>('fruit/newfilter');
+
+const availableFilters: AvailableFilters = {
+  isTrueFruit: (elm, value) => {
+    const fn = value.includes(elm.isTrueFruit);
+    console.log('@@@@@ - filter', elm, value, fn);
+    return fn;
+  },
+  canBeEatenRaw: (elm, value) => {
+    return value.includes(elm.canBeEatenRaw);
+  },
+};
+
 export const fruitReducer: Reducer<FruitState> = createReducer(
   initialState,
   (builder) =>
@@ -23,30 +36,53 @@ export const fruitReducer: Reducer<FruitState> = createReducer(
         ...state,
         list: payload(state.list),
       }))
+      .addCase(newfilter, (state, { payload }) => {
+        console.log('@@@@ newFilterReducer');
+        let newListState = initialState.list;
+        Object.entries(payload).forEach(([key, value]) => {
+          newListState = newListState.filter((elm) =>
+            availableFilters[key as keyof AvailableFilters](elm, value)
+          );
+        });
+
+        console.log('@@@@ filtered', newListState);
+
+        return {
+          ...state,
+          list: newListState,
+        };
+      })
+
       .addCase(filter, (state, { payload }) => {
-        console.log('@@@ submit received! filtering...', payload);
+        /*
+          passi un array di funzioni filtro, come nel sort
+          ti cicli il payload e le applichi
+
+          f(x, y)
+
+          g(P) => f(x, P) 
+
+          f(x) 
+
+          mul(x, y)
+          double(x) => mul(x, 2)
+
+
+          payload = {
+            (payload2) => (fruit) => payload2.isTrueFruit.includes(fruit.isTrueFruit)), [false, true]
+            (payload2) => (fruit) => payload2.canBeEatenRaw.includes(fruit.canBeEatenRaw), [true]
+          }
+
+
+          initialState.list.filter(payload[0](payload))
+
+        */
+
         const newList = initialState.list
           .filter((fruit) => payload.isTrueFruit.includes(fruit.isTrueFruit))
           .filter((fruit) =>
             payload.canBeEatenRaw.includes(fruit.canBeEatenRaw)
           );
-        /*
-        const filterNames: (keyof FilterState)[] = Object.keys(
-          payload
-        ) as Array<keyof FilterState>;
-        const filterFunctions = filterNames
-          .map((name) => ({
-            name,
-            value: payload[name],
-          }))
-          .filter((elm) => elm.value.sort() !== [false, true]);
-
-        const newList: Fruit[] = state.list.filter((fruit) =>
-          filterFunctions.every((filter) =>
-            filter.value.includes(fruit[filter.name])
-          )
-        );*/
-        console.log('new list', newList);
         return {
           ...state,
           list: newList,
